@@ -1,6 +1,5 @@
 ---
-book: 
-  title: "Quarto is great!"
+title: "Quarto is great!"
 format: 
    pdf: 
     toc: true
