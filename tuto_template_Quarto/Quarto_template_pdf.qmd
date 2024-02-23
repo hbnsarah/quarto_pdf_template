@@ -1,0 +1,115 @@
+---
+book: 
+  title: "Quarto is great!"
+format: 
+   pdf: 
+    toc: true
+    toc-depth: 3
+    toc-title: Table of contents
+   
+header-includes:
+  - \usepackage{fancyhdr}
+  - \usepackage{graphicx}
+  - \usepackage{eso-pic}
+  - \usepackage{tikz}
+  - \AtBeginDocument{\thispagestyle{empty}\begin{tikzpicture}[remember picture,overlay]
+          \node at (current page.south) [yshift=6cm] {\includegraphics[width=0.25\paperwidth,height=0.25\paperheight,keepaspectratio]{logo1.png}};
+          \node at (current page.center) [yshift=4cm] [anchor=north,yshift=-2cm] {\Huge\textbf{Quarto PDF document - Template}};
+          \node at (current page.south) [yshift=5cm] [anchor=north,yshift=-2cm] {\normalsize\textbf{February 2024}};
+          \end{tikzpicture}\clearpage}
+---
+
+```{=tex}
+\newcommand{\setbackgrounds}{
+  % Background image for the "north west" corner
+  \AddToShipoutPictureBG{
+    \AtPageUpperLeft{%
+      \hspace{-0.35cm}%
+      \raisebox{-6.89cm}{%
+        \includegraphics[width=5.5cm]{Corner.png}%
+      }%
+    }%
+  }
+  % Background image for the "south west" corner
+  \AddToShipoutPictureBG{
+    \AtPageCenter{%
+      \hspace{7.3cm}%
+      \raisebox{-13cm}{%
+        \includegraphics[width=2.5cm]{logo3.png}%
+      }%
+    }%
+  }
+}
+```
+\setbackgrounds
+
+```{=tex}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt} % Remove header rule
+\cfoot{\thepage}
+```
+```{r}
+#| echo: false
+library(lorem)
+text <- ipsum(paragraphs = 2)
+
+knitr::opts_chunk$set(root.dir = "/Users/shouben/Documents/tuto_template_Quarto")
+
+```
+
+\newpage
+
+# Introduction
+
+# Chapter 1
+
+## Nice Lipsum Quarto add-in
+
+Thanks to:
+
+<https://github.com/dragonstyle/lipsum>
+
+![Lorem ipsum add-in](Addins_Lorem.png){fig-align="center" width="10cm"}
+
+\newpage
+
+## ChatGPT and DALL-E
+
+Thank you ChatGPT and DALL-E for the nice logos that you generated for me! 🥰
+
+\newpage
+
+### Sub-topic 2
+
+Dolor ullamcorper odio ultrices venenatis purus, non est; est orci inceptos. Hendrerit aliquet imperdiet sodales et vel litora nisi enim. Blandit faucibus leo cras bibendum ante diam ad. Etiam turpis himenaeos dis, lectus per magna tristique feugiat morbi sodales. Purus metus ante mus tristique pretium! Na pretium.
+
+## Topic 3
+
+Dolor tristique himenaeos blandit posuere tincidunt venenatis ultrices. Fermentum interdum ante ac commodo curae sem, taciti cursus, mauris ante. Vivamus ridiculus, vestibulum; natoque justo aliquet eget leo phasellus felis integer est! Arcu et morbi sociis; cras ultrices molestie suspendisse fusce! Commodo aenean arcu aptent facilisi leo, est est urna semper dictum curae tortor.
+
+\newpage
+
+# Chapter 2
+
+## Topic 1
+
+Lorem sollicitudin rutrum integer gravida vehicula fermentum aptent praesent eleifend. Pellentesque eget in risus integer vel interdum eu phasellus. Cursus mollis ante, suspendisse ultricies sociis blandit? Velit nulla proin eleifend ligula tortor semper, semper cursus! Facilisis dapibus rhoncus vehicula litora natoque nec, per litora dignissim. Vivamus ante aptent accumsan vehicula odio curabitur lobortis duis facilisis quisque convallis phasellus proin scelerisque.
+
+Lorem feugiat scelerisque aenean tellus netus. Eros pulvinar sagittis suspendisse venenatis a ultrices posuere vehicula blandit suscipit dui? Vitae laoreet odio nibh nullam sapien dignissim ad, cras gravida pellentesque? Ac himenaeos volutpat commodo litora est – blandit ad massa dictum conubia congue. Ridiculus habitant vel ultrices magnis, justo faucibus hac. Commodo augue fringilla mattis viverra platea cubilia.
+
+Elit lacus, praesent leo turpis eu lobortis, eros eget sociis. Viverra cras consequat erat, morbi fusce vitae taciti. Praesent ad phasellus, ridiculus at neque, nascetur – libero iaculis bibendum natoque ligula. Dapibus magna etiam ligula risus laoreet tempus fusce ornare. Magna duis nascetur fusce facilisi lacus posuere mi penatibus montes dui! Facilisi sodales proin dictum.
+
+## Topic 2
+
+Sit rutrum quisque mattis consequat a aenean metus varius odio eget. Dictumst hendrerit nascetur litora senectus id sed, congue: condimentum at aptent! Dis viverra felis sagittis tellus mauris habitasse primis varius enim facilisi. Lectus tempus volutpat quisque quam ac aptent dignissim libero erat purus! Varius praesent curabitur vivamus, augue himenaeos proin rutrum lectus augue. Potenti lobortis magna tincidunt gravida mi eu! Pretium tincidunt, congue maecenas id vivamus proin tortor commodo phasellus commodo primis. Na primis.
+
+Amet sem sollicitudin laoreet sed, interdum vel commodo litora taciti facilisis. Aenean pretium platea sem: iaculis habitasse rutrum facilisi aliquet. Sapien vitae porttitor netus ultricies tempus tellus. Quisque rutrum class integer vehicula, ultricies pretium turpis cubilia dapibus. Lectus hac tempor nec iaculis, parturient nulla orci ligula leo primis per. Est id imperdiet imperdiet accumsan, nec, tristique purus non maecenas. Et nibh nisi class vulputate, inceptos aptent tellus eu feugiat integer laoreet. Habitasse viverra auctor quis sociosqu netus velit hac, porttitor – urna: odio ultrices ac facilisis, quis ut!
+
+Lorem orci nascetur laoreet mus quisque tempor lacinia interdum. Nibh proin nisl dis ac luctus; lobortis netus facilisis penatibus suscipit! Eleifend gravida felis cursus ac accumsan diam, vulputate sollicitudin tortor phasellus felis. Nec rutrum, praesent risus nullam; lobortis duis mollis eget, massa risus. Lobortis tellus augue, ligula pharetra platea massa aliquam sem aenean. Penatibus quisque fermentum interdum duis cursus cursus habitant ad platea. Vehicula sagittis lectus, suscipit litora eget facilisi magnis dui lobortis! Na lobortis.
+
+Ipsum sociis erat lectus condimentum cum himenaeos. Felis eros orci mauris ac, consequat mus tempor sem suscipit primis lobortis. Risus egestas ac dis ut iaculis nec, nostra malesuada ullamcorper: purus class. Conubia torquent at interdum metus rhoncus, praesent tempor commodo. Platea velit quisque etiam, phasellus aliquam nulla nibh purus laoreet, sapien aenean. Arcu conubia mi facilisis commodo penatibus; est taciti parturient et. Class metus rhoncus; eu, metus magna sed ac accumsan nec proin neque. Accumsan magnis mus interdum, fringilla vehicula sodales erat!
+
+Adipiscing eu egestas ridiculus – a eu vulputate turpis nullam tempor morbi? Ac egestas netus rutrum consequat fermentum senectus penatibus quis quis lobortis. Elementum magna sodales, fermentum non, aptent arcu sodales diam ornare pretium nunc cras. Molestie dignissim dignissim magnis vestibulum libero, vulputate vestibulum penatibus est viverra neque? Odio sed penatibus neque nullam aliquet quam odio dignissim pharetra! Nunc ligula laoreet convallis donec quis vel velit dignissim. Nunc torquent morbi rhoncus montes bibendum libero etiam dapibus nam dictumst. Potenti at eu ac malesuada.
+
+Dolor malesuada magna nisi nec: varius fermentum maecenas velit porttitor blandit interdum imperdiet. Nibh mus felis nullam: tortor vel morbi dictumst molestie sagittis, nostra rhoncus. Integer id scelerisque nostra massa tortor fringilla iaculis: torquent lectus egestas? Torquent fringilla iaculis vehicula nec! Lacinia aenean iaculis ultricies euismod hendrerit auctor bibendum neque. Faucibus id blandit phasellus suscipit malesuada varius libero congue interdum tortor. Placerat dapibus ligula purus nam, enim sociis massa purus massa posuere magnis. Mauris aenean a sociosqu diam sapien.
