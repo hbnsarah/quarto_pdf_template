@@ -48,10 +48,9 @@ header-includes:
 \renewcommand{\headrulewidth}{0pt} % Remove header rule
 \cfoot{\thepage}
 ```
+
 ```{r}
 #| echo: false
-library(lorem)
-text <- ipsum(paragraphs = 2)
 
 knitr::opts_chunk$set(root.dir = "/Users/shouben/Documents/tuto_template_Quarto")
 
